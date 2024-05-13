@@ -60,7 +60,8 @@ img {
   align-items: center;
 }
 
-.flex > div, .flex > ul {
+.flex > div,
+.flex > ul {
   flex: 1;
 }
 
@@ -69,17 +70,17 @@ img {
 }
 
 header {
-  background-image: url('./imagea/bg-hero-desktop.svg');
+  background-image: url("./imagea/bg-hero-desktop.svg");
   background-size: cover;
   background-position: center center;
   padding: 40px;
-  background-color:hsl(193, 100%, 96%);
+  background-color: hsl(193, 100%, 96%);
 }
 
 nav {
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;  
+  margin-bottom: 40px;
 }
 
 .header-img {
@@ -89,7 +90,7 @@ nav {
 
 .box {
   background-color: hsl(0, 0%, 100%);
-  margin: 40px 0;  
+  margin: 40px 0;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   padding: 60px;
@@ -116,8 +117,42 @@ footer ul li {
   margin-bottom: 20px;
 }
 
-footer .social-media{
+footer .social-media {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+footer .circle {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  height: 40px;
+  width: 40px;
+  text-decoration: none;
+}
+
+footer p {
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+  nav.flex {
+    flex-direction: row;
+  }
+  .header-img {
+    margin-top: 40px;
+    margin-left: 0;
+    width: 100%;
+  }
+  .flex {
+    flex-direction: column;
+  }
 }
