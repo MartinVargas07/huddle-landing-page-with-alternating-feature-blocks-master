@@ -155,4 +155,15 @@ footer p {
   .flex {
     flex-direction: column;
   }
+
+  .box-reverse-mobile {
+    flex-direction: column-reverse;
+  }
+  footer ul{
+    padding: 0;
+    width: 100%;
+  }
+  footer p{
+    text-align: center;
+  }
 }
