@@ -26,23 +26,59 @@
           <img src="./images/logo.svg" alt="Huddle logo" class="logo" />
           <button class="btn">Try It Free</button>
         </nav>
-        <div class="flex">
-          <div>
-            <h1>Build The Community Your Fans Will Love</h1>
-            <p>
-              Huddle re-imagines the way we build communities. You have a voice,
-              but so does your audience. Create connections with your users as
-              you engage in genuine discussion.
-            </p>
-            <botton class="btn btn-primary">Get Started For Free</botton>
-          </div>
-          <div>
-            <img
-              src="./images/illustration-mockups.svg"
-              alt="mockups"
-              class="header-img"
-            />
-          </div>
+        <section class="carousel" aria-label="Gallery">
+          <ol class="carousel__viewport">
+            <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+              <div class="carousel__snapper">
+                <h2>Build The Community Your Fans Will Love</h2>
+                <img src="./images/illustration-mockups.svg" alt="mockups" class="carousel-img">
+                <a href="#carousel__slide4" class="carousel__prev">Go to last slide</a>
+                <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
+              </div>
+            </li>
+            <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+              <div class="carousel__snapper">
+                <h2>Good Things are Coming</h2>
+                <img src="./images/IMG1.png" alt="GTAC" class="carousel-img">
+                <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
+                <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
+              </div>
+            </li>
+            <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+              <div class="carousel__snapper">
+                <h2>Dream Big</h2>
+                <img src="./images/IMG2.png" alt="Dream Big" class="carousel-img">
+                <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
+                <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
+              </div>
+            </li>
+          </ol>
+          <aside class="carousel__navigation">
+            <ol class="carousel__navigation-list">
+              <li class="carousel__navigation-item">
+                <a href="#carousel__slide1" class="carousel__navigation-button"
+                  >Go to slide 1</a
+                >
+              </li>
+              <li class="carousel__navigation-item">
+                <a href="#carousel__slide2" class="carousel__navigation-button"
+                  >Go to slide 2</a
+                >
+              </li>
+              <li class="carousel__navigation-item">
+                <a href="#carousel__slide3" class="carousel__navigation-button"
+                  >Go to slide 3</a
+                >
+              </li>
+            </ol>
+          </aside>
+        </section>
+        <div class="container">
+          <p>
+            Huddle re-imagines the way we build communities. You have a voice,
+            but so does your audience. Create connections with your users as you
+            engage in genuine discussion.
+          </p>
         </div>
       </div>
     </header>
@@ -144,7 +180,6 @@
         <p>&copy; Copyright 2018 Huddle. All rights reserved.</p>
       </div>
     </footer>
-
     <footer>
       <p class="attribution">
         Challenge by
