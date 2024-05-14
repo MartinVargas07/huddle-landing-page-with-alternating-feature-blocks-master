@@ -1,14 +1,32 @@
+// style.scss
+
+// Importing fonts
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
 
+// Variables
+$primary-color: hsl(322, 100%, 66%);
+$neutral-very-pale-cyan: hsl(193, 100%, 96%);
+$neutral-very-dark-cyan: hsl(192, 100%, 9%);
+$neutral-grayish-blue: hsl(208, 11%, 55%);
+
+// Mixins
+@mixin flex($direction: row, $align: center, $justify: center) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+// Global styles
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
-  color: hsl(192, 100%, 9%);
+  color: $neutral-very-dark-cyan;
   font-size: 1.15em;
   margin: 0;
 }
@@ -35,11 +53,11 @@ img {
   cursor: pointer;
   border: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-}
 
-.btn-primary {
-  background-color: hsl(322, 100%, 66%);
-  color: #fff;
+  &-primary {
+    background-color: $primary-color;
+    color: #fff;
+  }
 }
 
 .container {
@@ -54,30 +72,24 @@ img {
 }
 
 .flex {
-  display: flex;
-  align-items: center;
-}
-
-.flex > div,
-.flex > ul {
-  flex: 1;
+  @include flex;
 }
 
 .align-start {
   align-items: flex-start;
 }
 
+// Header styles
 header {
   background-image: url("./imagea/bg-hero-desktop.svg");
   background-size: cover;
   background-position: center center;
   padding: 40px;
-  background-color: hsl(193, 100%, 96%);
+  background-color: $neutral-very-pale-cyan;
 }
 
 nav {
-  justify-content: space-between;
-  align-items: center;
+  @include flex($justify: space-between);
   margin-bottom: 40px;
 }
 
@@ -86,6 +98,7 @@ nav {
   width: 80%;
 }
 
+// Box styles
 .box {
   background-color: hsl(0, 0%, 100%);
   margin: 40px 0;
@@ -101,8 +114,9 @@ nav {
   z-index: 1;
 }
 
+// Footer styles
 footer {
-  background-color: hsl(192, 100%, 9%);
+  background-color: $neutral-very-dark-cyan;
   padding: 180px 0 60px;
   color: #fff;
 }
@@ -116,9 +130,7 @@ footer ul li {
 }
 
 footer .social-media {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex($justify: center);
 }
 
 footer .circle {
@@ -138,6 +150,7 @@ footer p {
   text-align: right;
 }
 
+// Carousel styles
 ol,
 li {
   list-style: none;
@@ -281,7 +294,7 @@ li {
 
 .carousel::before,
 .carousel::after {
-  content: '';
+  content: "";
   z-index: 1;
   background-color: #333;
   background-size: 1.5rem 1.5rem;
@@ -302,6 +315,7 @@ li {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
 }
 
+// Media queries
 @media screen and (max-width: 768px) {
   body {
     text-align: center;
@@ -317,15 +331,14 @@ li {
   .flex {
     flex-direction: column;
   }
-
   .box-reverse-mobile {
     flex-direction: column-reverse;
   }
-  footer ul{
+  footer ul {
     padding: 0;
     width: 100%;
   }
-  footer p{
+  footer p {
     text-align: center;
   }
 }
